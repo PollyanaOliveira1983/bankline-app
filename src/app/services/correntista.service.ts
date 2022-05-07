@@ -9,7 +9,9 @@ const baseUrl = 'http://localhost:8081';
 })
 
 export class CorrentistaService {
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient
+  ) { }
   
   list(): Observable<any> {
     return this.http.get(`${baseUrl}/correntista`);

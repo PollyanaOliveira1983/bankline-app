@@ -23,6 +23,7 @@ registerLocaleData(localePt);
     MovimentacaoListComponent,
     MovimentacaoNewComponent,
     CorrentistaComponent
+    
   ],
   imports: [
     BrowserModule,

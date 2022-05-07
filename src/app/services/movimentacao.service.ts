@@ -8,9 +8,11 @@ const baseUrl = 'http://localhost:8081';
   providedIn: 'root'
 })
 export class MovimentacaoService {
-  [x: string]: any;
+  
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient
+  ) { }
   
   list(): Observable<any> {
     return this.http.get(`${baseUrl}/movimentacoes`);
@@ -18,10 +20,8 @@ export class MovimentacaoService {
 
   create(movimentacao:any): Observable<any> {
     return this.http.post(`${baseUrl}/movimentacoes`,movimentacao);
-  }
-
-  findByIdConta(idConta:any): Observable<any> {
-    return this.http.get(`${baseUrl}/movimentacoes/${idConta}`);
-  }
-
+ }
+ findByIdConta(idConta:any): Observable<any> {
+  return this.http.get(`${baseUrl}/movimentacoes/${idConta}`);
+}
 }  

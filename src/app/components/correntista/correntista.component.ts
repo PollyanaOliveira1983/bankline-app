@@ -6,12 +6,15 @@ import { CorrentistaService } from 'src/app/services/correntista.service';
   templateUrl: './correntista.component.html',
   styleUrls: ['./correntista.component.css']
 })
-
 export class CorrentistaComponent implements OnInit {
-cpf:any
+
+  correntistas:any;
+  cpf:any;
   nome:any;
-  correntistas:any
-  constructor(private correntistaService: CorrentistaService) { }
+
+  constructor(
+    private correntistaService: CorrentistaService,
+  ) { }
 
   ngOnInit(): void {
     this.exibirCorrentistas();
@@ -27,7 +30,6 @@ cpf:any
           console.log(error);
         });
   }
-
   save(): void {
     const correntista = {
       cpf:this.cpf,

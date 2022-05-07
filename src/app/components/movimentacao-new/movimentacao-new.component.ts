@@ -11,11 +11,11 @@ export class MovimentacaoNewComponent implements OnInit {
   
   correntistas:any;
   correntista:any;
-
-  dataHora:any;
-  descricao:any;
-  valor:any;
-  tipo:any;
+  valor: any;
+  descricao: any;
+  tipo: any;
+  dataHora: any;
+  
 
   constructor(
     private movimentacaoService: MovimentacaoService,
@@ -57,5 +57,4 @@ export class MovimentacaoNewComponent implements OnInit {
           console.log(error);
         });
   }
-
 }

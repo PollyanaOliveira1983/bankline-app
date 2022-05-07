@@ -10,15 +10,16 @@ import { MovimentacaoService } from 'src/app/services/movimentacao.service';
 export class MovimentacaoListComponent implements OnInit {
 
   movimentacoes:any;
-  correntista:any;
   correntistas:any;
+  correntista:any;
   
   constructor(
     private movimentacaoService: MovimentacaoService,
-      private correntistaService: CorrentistaService
+    private correntistaService: CorrentistaService,    
 
   ) { }  
   ngOnInit(): void {
+    this.exibirCorrentistas();
     
   }
   exibirCorrentistas(): void {
